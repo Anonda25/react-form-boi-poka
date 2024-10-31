@@ -1,14 +1,17 @@
 
+import { Outlet } from 'react-router-dom'
 import './App.css'
+import Navber from './Components/Navber/Navber'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
   return (
-    <>
-      
-      <h1>Vite + React</h1>
-      
-    </>
+    <div className='max-w-7xl mx-auto'>
+      <Navber></Navber>
+      <Outlet></Outlet>
+      <Footer></Footer>
+    </div>
   )
 }
 
