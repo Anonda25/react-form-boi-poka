@@ -8,7 +8,7 @@ function Navber() {
         <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-        <a>Listed Books</a>
+        <NavLink to={'/BookList'}>Listed Books</NavLink>
       </li>
     </>
   );

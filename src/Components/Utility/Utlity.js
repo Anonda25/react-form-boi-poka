@@ -47,4 +47,4 @@ const getStoredWeshList = ()=>{
     }
   }
 
-export { addToStoredReadList, addToStoredWeshList }
+export { addToStoredReadList, addToStoredWeshList, getStoredReadList }
