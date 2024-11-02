@@ -9,8 +9,7 @@ function Books() {
         .then(data => setBooks(data))
     },[])
   return (
-    <div>
-        {books.length}
+    <div className='mt-10'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  '>
             {
                 books.map(book=><Book key={book.bookId} book={book}></Book>)
