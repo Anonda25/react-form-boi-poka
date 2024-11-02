@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function Book({book}) {
-    console.log(book);
+
 const {bookId, image, bookName, author, category, publisher, tags } = book;
 
   return (
@@ -13,9 +13,10 @@ const {bookId, image, bookName, author, category, publisher, tags } = book;
           <img className="h-[166px] " src={image} alt={author} />
         </figure>
         <div>
-          {tags.map((p, ind) => (
-            <button className="mr-5 bg-[#23BE0A0D] p-2 rounded-2xl mt-4 text-[#23BE0A]">
-              {p}
+          {tags.map((tag, ind) => (
+            <button
+            key={ind} className="mr-5 bg-[#23BE0A0D] p-2 rounded-2xl mt-4 text-[#23BE0A]">
+              {tag}
             </button>
           ))}
         </div>
@@ -25,6 +26,7 @@ const {bookId, image, bookName, author, category, publisher, tags } = book;
             <div className="badge badge-secondary">NEW</div>
           </h2>
           <p className="text-xl my-4 ">By : {publisher}</p>
+          <div className='border-t-2 border-dashed mb-3'></div>
           <div className="card-actions justify-between items-center">
             <div className="badge badge-outline">{category}</div>
             <div className="rating rating-xs">
@@ -52,7 +54,7 @@ const {bookId, image, bookName, author, category, publisher, tags } = book;
               <input
                 type="radio"
                 name="rating-5"
-                className="mask mask-star-2 bg-orange-400"
+                className="mask mask-star-2 bg-orange-100"
               />
             </div>
           </div>
